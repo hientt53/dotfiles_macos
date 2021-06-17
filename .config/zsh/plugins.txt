@@ -1,0 +1,10 @@
+# theme
+romkatv/powerlevel10k
+
+#plugins
+
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-completions
+marzocchi/zsh-notify
+zsh-users/zsh-syntax-highlighting
