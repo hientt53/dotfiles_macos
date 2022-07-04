@@ -1,1 +1,5 @@
 alias sail='bash vendor/bin/sail'
+alias sa='sail artisan'
+alias a='php artisan'
+alias at='php artisan tinker'
+alias acc='a config:clear'

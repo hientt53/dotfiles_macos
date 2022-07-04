@@ -6,7 +6,6 @@
 
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-
 # My custom space names for my 3 monitor setup. These names are used in some of my scripts.
 yabai -m space 1 --label one
 yabai -m space 2 --label two
@@ -16,12 +15,13 @@ yabai -m space 5 --label five
 yabai -m space 6 --label six
 yabai -m space 7 --label severn
 yabai -m space 8 --label eight
+yabai -m space 9 --label night
 
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
+#yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
@@ -30,7 +30,7 @@ yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Path Finder$" manage=off
 yabai -m rule --add app="^TeamViewer$" sticky=off layer=above manage=off
 yabai -m rule --add app="Fantastical" manage=off
-yabai -m rule --add app="^Spotify$" manage=off
+#yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^iTerm2$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
 yabai -m rule --add app="^Time Out$" manage=off
@@ -41,8 +41,28 @@ yabai -m rule --add app="^CiscoSparkHelper$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Cisco Webex Start$" manage=off
 yabai -m rule --add app="^Private Internet Access$" manage=off
+yabai -m rule --add app="^QuickTime Player$" manage=off
+yabai -m rule --add app="^Authy Desktop$" manage=off
 
-yabai -m rule --add app="^Brave Browser$" space=3
+#yabai -m rule --add title="^Preferences$"  manage=off
+
+#1
+#2
+yabai -m rule --add app="Code" space=2
+#3
+yabai -m rule --add app="Brave Browser" space=3
+#4
+#5
+#6
+yabai -m rule --add app="^DataGrip$" space=6
+#7
+#8
+yabai -m rule --add app="Messenger" space=8
+yabai -m rule --add app="Zalo" space=8
+yabai -m rule --add app="Chat" space=8
+yabai -m rule --add app="Slack" space=8
+#9
+yabai -m rule --add app="Spotify" space=9
 
 #find ~/Library/Parallels/Applications\ Menus/ -maxdepth 3 -type f | awk -F'/' '{ print $NF; }' | awk '{$1=$1};1' | sort | uniq | tr "\n" "\0" | xargs -0 -I{} yabai -m rule --add app="^{}\$" title=".*" manage=on
 
